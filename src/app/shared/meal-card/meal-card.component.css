@@ -1,0 +1,34 @@
+.meal-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: scale(1.03);
+}
+
+.meal-image {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 220px;
+}
+
+.meal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.meal-card:hover .meal-overlay {
+  opacity: 1;
+}
+
+.meal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
