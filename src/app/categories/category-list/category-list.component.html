@@ -1,1 +1,8 @@
-<p>category-list works!</p>
+<h2>Meal Categories</h2>
+<div *ngFor="let category of categories">
+  <h3>{{ category.strCategory }}</h3>
+  <img [src]="category.strCategoryThumb" width="200" />
+  <p>{{ category.strCategoryDescription | slice:0:100 }}...</p>
+  <a [routerLink]="['/categories', category.strCategory]">View Meals</a>
+  <hr />
+</div>
