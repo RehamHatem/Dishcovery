@@ -20,8 +20,8 @@ constructor(private recipesService:RecipesService){}
     });
   }
 
-  goToMealDetails() {
+  // goToMealDetails() {
     
-  }
+  // }
 
 }

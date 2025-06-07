@@ -1,1 +1,37 @@
-<p>recipes-details works!</p>
+<div *ngIf="meal" class="meal-details container my-5">
+  <div class="row g-4">
+    <div class="col-md-5">
+      <img [src]="meal.strMealThumb" [alt]="meal.strMeal" class="img-fluid rounded shadow" />
+    </div>
+
+    <div class="col-md-7">
+      <h2 class="mb-3">{{ meal.strMeal }}</h2>
+      <p><strong>Area:</strong> {{ meal.strArea }}</p>
+      <p><strong>Category:</strong> {{ meal.strCategory }}</p>
+
+      <h4 class="mt-4">Instructions</h4>
+      <p class="text-muted">{{ meal.strInstructions }}</p>
+
+      <h4 class="mt-4">Ingredients</h4>
+      <ul class="list-unstyled d-flex flex-wrap gap-2">
+        <li *ngFor="let item of ingredients" class="badge r px-3 py-2 rounded-pill">
+          {{ item.measure }} {{ item.ingredient }}
+        </li>
+      </ul>
+
+      <div *ngIf="tags.length" class="mt-4">
+        <h5>Tags</h5>
+        <ul class="list-inline">
+          <li *ngFor="let tag of tags" class="list-inline-item badge bg-secondary-subtle text-secondary border border-secondary px-3 py-2 rounded-pill">
+            {{ tag }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-4">
+        <a [href]="meal.strSource" target="_blank" class=" button btn  me-2">View Source</a>
+        <a [href]="meal.strYoutube" target="_blank" class="btn btn-danger">Watch on YouTube</a>
+      </div>
+    </div>
+  </div>
+</div>

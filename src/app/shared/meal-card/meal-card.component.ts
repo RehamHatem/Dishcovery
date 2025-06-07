@@ -1,9 +1,10 @@
 import { Component ,Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-meal-card',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './meal-card.component.html',
   styleUrl: './meal-card.component.css'
 })
@@ -11,9 +12,9 @@ export class MealCardComponent {
   @Input() meal: any;
   
 
-  getMealDetails() {
+  getMealDetails(id :string) {
     
-    console.log('Meal clicked:');
+    console.log(`Meal clicked: ${id}`);
   }
 
 }
