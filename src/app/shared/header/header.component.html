@@ -6,9 +6,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <form *ngIf="showSearch" class="search-form d-flex">
-                    <input type="search" placeholder="Search recipes..." aria-label="Search">
-                    <button type="submit">Search</button>
-                </form>
+  <input
+    type="search"
+    [(ngModel)]="searchName"
+    (input)="onSearchChange()"
+    placeholder="Search recipes..."
+    aria-label="Search"
+    name="search"
+  />
+  <button type="submit">Search</button>
+</form>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                       <a class="nav-link" routerLink="/categories" routerLinkActive="active-link">Categories</a>

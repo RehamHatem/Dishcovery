@@ -1,6 +1,12 @@
-<div class="meals-wrapper">
+<!-- <div class="meals-wrapper">
   <app-meal-card
     *ngFor="let meal of meals"
+    [meal]="meal"
+  ></app-meal-card>
+</div> -->
+<div class="meals-wrapper">
+  <app-meal-card
+    *ngFor="let meal of filteredMeals"
     [meal]="meal"
   ></app-meal-card>
 </div>

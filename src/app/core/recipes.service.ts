@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient , } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +21,12 @@ meals : any []=[];
   getMealById(id : string): Observable<any> {
     return this.http.get<any>(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
   }
+
+private searchTerm = new BehaviorSubject<string>('');
+  searchTerm$ = this.searchTerm.asObservable();
+
+  setSearchTerm(term: string) {
+    this.searchTerm.next(term);
+  }
+
 }

@@ -13,11 +13,20 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class RecipesListComponent implements OnInit {
   meals:any[]=[];
+  filteredMeals: any[] = [];
 constructor(private recipesService:RecipesService){}
   ngOnInit() {
     this.recipesService.getAllMeals().subscribe(data => {
       this.meals = data;
+      this.filteredMeals = data;
     });
+
+this.recipesService.searchTerm$.subscribe(term => {
+      this.filteredMeals = this.meals.filter(meal =>
+        meal.strMeal.toLowerCase().includes(term.toLowerCase())
+      );
+    });
+
   }
   
 }
