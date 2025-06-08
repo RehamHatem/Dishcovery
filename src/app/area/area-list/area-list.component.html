@@ -1,0 +1,17 @@
+<div *ngIf="loading">Loading areas...</div>
+<div class="row" *ngIf="!loading">
+  <div
+    class="col-3 mb-4"
+    *ngFor="let area of areas"
+    (click)="selectArea(area.strArea)"
+    tabindex="0"
+    (keydown.enter)="selectArea(area.strArea)"
+    role="button"
+    class="area-card text-center overflow-hidden cursor-pointer"
+    [class.active]="selectedArea === area.strArea"
+    [attr.aria-label]="'Select ' + area.strArea"
+  >
+    <i class="fa-solid fa-earth-americas fa-xl mb-2" aria-hidden="true"></i>
+    <h3>{{ area.strArea }}</h3>
+  </div>
+</div>
