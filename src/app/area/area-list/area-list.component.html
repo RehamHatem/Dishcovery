@@ -1,17 +1,26 @@
-<div *ngIf="loading">Loading areas...</div>
-<div class="row" *ngIf="!loading">
-  <div
-    class="col-3 mb-4"
-    *ngFor="let area of areas"
-    (click)="selectArea(area.strArea)"
-    tabindex="0"
-    (keydown.enter)="selectArea(area.strArea)"
-    role="button"
-    class="area-card text-center overflow-hidden cursor-pointer"
-    [class.active]="selectedArea === area.strArea"
-    [attr.aria-label]="'Select ' + area.strArea"
-  >
-    <i class="fa-solid fa-earth-americas fa-xl mb-2" aria-hidden="true"></i>
-    <h3>{{ area.strArea }}</h3>
+<div *ngIf="loading">Loading ...</div>
+<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+<div *ngIf="!loading && !error">
+  <div class="row" *ngIf="meals.length === 0 && selectedArea==''">
+    <div
+      class="col-3 mb-4"
+      *ngFor="let area of areas"
+      (click)="selectArea(area.strArea)"
+      tabindex="0"
+      (keydown.enter)="selectArea(area.strArea)"
+      role="button"
+      class="area-card text-center overflow-hidden cursor-pointer"
+      [class.active]="selectedArea === area.strArea"
+      [attr.aria-label]="'Select ' + area.strArea"
+    >
+      <i class="fa-solid fa-earth-americas fa-xl mb-2" aria-hidden="true"></i>
+      <h3>{{ area.strArea }}</h3>
+    </div>
+  </div>
+  <div class="meals-wrapper" *ngIf="meals.length > 0">
+    <app-meal-card *ngFor="let meal of meals" [meal]="meal"></app-meal-card>
+  </div>
+  <div *ngIf="meals.length === 0 && selectedArea" class="alert alert-info">
+    No meals available for the selected area.
   </div>
 </div>

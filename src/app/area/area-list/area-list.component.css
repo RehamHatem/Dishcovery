@@ -48,6 +48,13 @@
   box-shadow: 0 5px 10px #006D5B;
  
 }
+.meals-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
 
 .area-card h3 {
   margin: 0;
