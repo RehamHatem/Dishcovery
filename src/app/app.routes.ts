@@ -6,6 +6,7 @@ import { CategoryListComponent } from './categories/category-list/category-list.
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { RecipesDetailsComponent } from './recipes/recipes-details/recipes-details.component';
 import { AreaListComponent } from './area/area-list/area-list.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 export const routes: Routes = [
     {path:"",redirectTo: 'dishcovery', pathMatch: 'full' },
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: "categories", component: CategoryListComponent },
     {path:"meal/:id",component:RecipesDetailsComponent},
     {path:"area",component:AreaListComponent},
+    {path:"aboutUs",component:AboutUsComponent},
     {path:'**',component:NotFoundComponent}
 
 ];
