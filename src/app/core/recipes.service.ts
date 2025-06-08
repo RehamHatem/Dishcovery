@@ -15,4 +15,8 @@ meals : any []=[];
         map(res => res.meals || [])
       );
   }
+
+  getMealById(id : string): Observable<any> {
+    return this.http.get<any>(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+  }
 }

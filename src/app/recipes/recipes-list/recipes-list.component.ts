@@ -19,9 +19,5 @@ constructor(private recipesService:RecipesService){}
       this.meals = data;
     });
   }
-
-  goToMealDetails() {
-    
-  }
-
+  
 }
