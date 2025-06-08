@@ -1,8 +1,8 @@
-<h2>Meal Categories</h2>
-<div *ngFor="let category of categories">
-  <h3>{{ category.strCategory }}</h3>
-  <img [src]="category.strCategoryThumb" width="200" />
-  <p>{{ category.strCategoryDescription | slice:0:100 }}...</p>
-  <a [routerLink]="['/categories', category.strCategory]">View Meals</a>
-  <hr />
+<div class="meals-wrapper">
+  <app-category-card
+    *ngFor="let category of categories"
+    [category]="category"
+  ></app-category-card>
 </div>
+<h1>Amira</h1>
+

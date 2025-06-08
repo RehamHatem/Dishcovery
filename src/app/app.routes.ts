@@ -5,5 +5,5 @@ import { CategoryListComponent } from './categories/category-list/category-list.
 
 export const routes: Routes = [
     {path:"dishcovery",component:RecipesListComponent},
-    { path: 'categories', component: CategoryListComponent },
+    { path: "categories", component: CategoryListComponent },
 ];
