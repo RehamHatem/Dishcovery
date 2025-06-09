@@ -29,4 +29,10 @@ private searchTerm = new BehaviorSubject<string>('');
     this.searchTerm.next(term);
   }
 
+
+
+ // Get meals by category name
+  getMealsByCategory(categoryName: string): Observable<any> {
+    return this.http.get<any>(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
+  }
 }
