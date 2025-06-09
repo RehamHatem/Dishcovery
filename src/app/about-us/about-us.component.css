@@ -1,0 +1,40 @@
+.about-title {
+  color:#008573;
+  margin-top: 50px;
+}
+.container{
+    min-height: 100vh;
+    
+}
+.team-member {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #f5b4c9;
+}
+
+.member-name {
+  color: #008573;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.member-role {
+  color: #e27b9d;
+}
+

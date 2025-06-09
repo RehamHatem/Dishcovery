@@ -5,22 +5,29 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <form class="search-form d-flex">
-                    <input type="search" placeholder="Search recipes..." aria-label="Search">
-                    <button type="submit">Search</button>
-                </form>
+                <form *ngIf="showSearch" class="search-form d-flex">
+  <input
+    type="search"
+    [(ngModel)]="searchName"
+    (input)="onSearchChange()"
+    placeholder="Search recipes..."
+    aria-label="Search"
+    name="search"
+  />
+  <button type="submit">Search</button>
+</form>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                       <a class="nav-link" routerLink="/categories" routerLinkActive="active-link">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >Area</a>
+                        <a class="nav-link" routerLink="/area" routerLinkActive="active-link" >Area</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >Ask Dishcovery</a>
+                        <a class="nav-link  " routerLink="/ask" routerLinkActive="active-link">Ask Dishcovery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >About Us</a>
+                        <a class="nav-link" routerLink="/aboutUs" routerLinkActive="active-link">About Us</a>
                     </li>
                 </ul>
             </div>

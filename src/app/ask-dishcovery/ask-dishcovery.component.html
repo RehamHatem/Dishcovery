@@ -1,0 +1,34 @@
+<div class="container">
+    <h2 class="text-center contact-title">Let AI tell you what recipes you can do</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="contact-form" (ngSubmit)="onSubmit()">
+          
+          <div class="mb-3">
+            <label for="ing" class="form-label">Your ingredients</label>
+            <textarea 
+            [(ngModel)]="ingredients"
+            name="ingredients"
+            class="form-control" id="ing" name="ing" rows="5" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Notes</label>
+            <textarea 
+            [(ngModel)]="notes"
+            name="notes"
+            class="form-control" id="message" name="Message" rows="5" ></textarea>
+          </div>
+          <!-- <button type="submit" class="btn custom-button">Ask Dishcovery</button> -->
+           <button type="submit" class="btn custom-button" [disabled]="loading">
+          {{ loading ? 'Thinking...' : 'Ask Dishcovery' }}
+        </button>
+        </form>
+
+        <div class="mt-4 mb-4" *ngIf="aiResponse">
+        <h4>Dishcovery AI Suggests:</h4>
+        <div class="p-3 border rounded bg-light">
+          <pre style="white-space: pre-wrap;">{{ aiResponse }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>

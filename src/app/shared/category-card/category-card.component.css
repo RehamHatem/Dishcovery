@@ -6,13 +6,30 @@
 .meal-card:hover {
   transform: scale(1.03);
 }
-
+h3{
+  color:#006D5B ;
+}
 .meal-image {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
-  object-fit: cover;
-  height: 220px;
+  object-fit: fill;
+  height: 100px;
+}
+.button{
+  border: solid 1px #e27b9d;
+  color: #006D5B;
+}
+.button:hover{
+  background: linear-gradient(145deg, #f97e95, #fba8b7);
+  color: #f7f1de;
+  
+}
+.p-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#fbf9f2 ;
 }
 
 .meal-overlay {
@@ -24,11 +41,16 @@
   border-radius: 0.5rem;
 }
 
-.meal-card:hover .meal-overlay {
-  opacity: 1;
-}
-
 .meal-title {
   font-size: 1.25rem;
   font-weight: bold;
+}
+.meal-description {
+  max-height: 4.5em; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.5em;
 }

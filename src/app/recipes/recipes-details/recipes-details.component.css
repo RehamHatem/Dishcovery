@@ -1,0 +1,35 @@
+.meal-details h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #006D5B;
+}
+
+
+.meal-details img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.meal-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.meal-details ul {
+  padding-left: 0;
+}
+
+.badge {
+  font-size: 0.9rem;
+  color: #e27b9d  ;
+  background-color: #f7f1de ;
+  border: bold #FF758F;
+}
+.button{
+    background-color: #ffffff;
+    border-color: #FF758F !important ;
+    color: #006D5B;
+}
+.button:hover{
+    background-color: #f7f1de ;
+}
