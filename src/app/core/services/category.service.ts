@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CategoryService {
- 
+
   private baseUrl = 'https://www.themealdb.com/api/json/v1/1';
 
   constructor(private http: HttpClient) { }
@@ -20,8 +20,5 @@ export class CategoryService {
       );
   }
 
-  // Get meals by category name
-  getMealsByCategory(category: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/filter.php?c=${category}`);
-  }
+ 
 }

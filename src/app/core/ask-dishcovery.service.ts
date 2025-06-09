@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+ import { environment } from '../../environments/environment';
+//D:\0-ITI\Angular\project\Dishcovery\src\environments\environments.ts
 
 @Injectable({
   providedIn: 'root'

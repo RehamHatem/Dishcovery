@@ -1,1 +1,5 @@
-<p>category-details works!</p>
+<div class="row">
+  <div class="col-md-4" *ngFor="let meal of meals">
+    <app-meal-card [meal]="meal"></app-meal-card>
+  </div>
+</div>

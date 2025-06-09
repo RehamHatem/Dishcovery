@@ -15,7 +15,7 @@ export class RecipesDetailsComponent implements OnInit {
    @Input() meal: any;
   ingredients: { measure: string; ingredient: string }[] = [];
   tags: string[] = [];
-
+ 
   constructor(private route: ActivatedRoute,private recipeService:RecipesService){}
 
   ngOnInit(): void {
