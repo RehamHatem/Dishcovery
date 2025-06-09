@@ -1,0 +1,39 @@
+
+
+.form-control:focus {
+  border-color: #f7a6c1 !important;
+  box-shadow: 0 0 0 0.2rem rgba(248, 171, 200, 0.25) !important;
+  outline: none;
+}
+.contact-title {
+  color: #008573;
+  margin-top: 50px;
+}
+.container{
+    min-height: 100vh;
+}
+
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  color: #e17096;
+  box-shadow: 0 0 15px rgba(210, 67, 134, 0.1);
+}
+
+.custom-button {
+  background-color: #e27b9d !important;
+  border: none !important;
+  color: #fff !important;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: rgb(249, 156, 173) !important;
+  box-shadow: 0 4px 12px rgba(162, 185, 167, 0.4);
+}
+
