@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
- import { environment } from '../../environments/environment';
 //D:\0-ITI\Angular\project\Dishcovery\src\environments\environments.ts
 
 @Injectable({
@@ -10,7 +9,7 @@ export class AskDishcoveryService {
 
   private apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
   // private apiKey='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';
-  private apiKey=environment.openrouterApiKey;
+  private apiKey="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";
 
   constructor(private http: HttpClient) {}
 

@@ -11,7 +11,7 @@
   display: block;
   width: 100%;
   border-radius: 0.5rem;
-  object-fit: cover;
+  object-fit: fill;
   height: 220px;
 }
 
